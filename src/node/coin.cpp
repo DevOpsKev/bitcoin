@@ -11,6 +11,7 @@ void FindCoins(std::map<COutPoint, Coin>& coins)
 {
     LOCK2(cs_main, ::mempool.cs);
     assert(pcoinsTip);
+    //hello me!
     CCoinsViewCache& chain_view = *::pcoinsTip;
     CCoinsViewMemPool mempool_view(&chain_view, ::mempool);
     for (auto& coin : coins) {
